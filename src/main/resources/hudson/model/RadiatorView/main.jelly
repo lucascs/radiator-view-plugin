@@ -9,7 +9,7 @@
 		<j:otherwise>
 			<t:setIconSize />
 			<div class="dashboard"
-				style="overflow: visible; left: 0px; top: 34px; position: absolute; height: 95%; z-index: 9999; width: 100%; background-color: white; background-image: url(/static/0360aadc/images/hudson.png); background-repeat: no-repeat; background-position: left bottom;">
+				style="overflow: visible; left: 0px; top: 34px; position: absolute; height: 95%; z-index: 9999; width: 100%; background-color: black; ">
 				<j:if test="${!empty(items)}">
 					<!-- project list -->
 					<j:invoke var="failJobs" on="${from}" method="sortFailing">
@@ -84,5 +84,23 @@
 			</div>
 		</j:otherwise>
 	</j:choose>
-
+	<script type="text/javascript">
+		$$('.building').each(function(e) {
+			var fadeIn = new YAHOO.util.Anim(e, { 
+				opacity: {from: 0.5, to: 0.9} 
+			});
+			var fadeOut = new YAHOO.util.Anim(e, { 
+				opacity: {from: 0.9, to: 0.5} 
+			});
+			
+			fadeIn.onComplete.subscribe(function() {
+				fadeOut.animate();
+			});
+			fadeOut.onComplete.subscribe(function() {
+				fadeIn.animate();
+			});
+			
+			fadeIn.animate();
+		});
+	</script>
 </j:jelly>
