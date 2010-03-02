@@ -25,7 +25,7 @@ import org.kohsuke.stapler.StaplerRequest;
  * systems - ideal for running on a spare PC in the office. Many thanks to
  * Julien Renaut for the xfpanel plugin that inspired some of the updates to
  * this view.
- * 
+ *
  * @author Mark Howard (mh@tildemh.com)
  */
 public class RadiatorView extends ListView
@@ -86,7 +86,7 @@ public class RadiatorView extends ListView
 
     /**
      * Filters the jobs for stable jobs and sorts them.
-     * 
+     *
      * @param jobs
      *            all jobs
      * @return sorted list of stable jobs.
@@ -123,7 +123,7 @@ public class RadiatorView extends ListView
 
     /**
      * Gets from the request the configuration parameters
-     * 
+     *
      * @param req
      *            {@link StaplerRequest}
      * @throws ServletException
@@ -157,7 +157,7 @@ public class RadiatorView extends ListView
     /**
      * Converts a list of jobs to a list of list of jobs, suitable for display
      * as rows in a table.
-     * 
+     *
      * @param jobs
      *            the jobs to include.
      * @param failingJobs
@@ -238,7 +238,7 @@ public class RadiatorView extends ListView
         @Override
         public String getDisplayName()
         {
-            return "Radiator";
+            return "Custom Radiator";
         }
 
         /**
@@ -262,3 +262,4 @@ public class RadiatorView extends ListView
         }
     }
 }
+

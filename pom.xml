@@ -8,9 +8,9 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   
-  <artifactId>radiatorviewplugin</artifactId>
+  <artifactId>customradiatorviewplugin</artifactId>
   <packaging>hpi</packaging>
-  <name>Hudson Radiator View Plugin</name>
+  <name>Custom Hudson Radiator View Plugin</name>
   <version>1.6-SNAPSHOT</version>
   <url>http://wiki.hudson-ci.org/display/HUDSON/Radiator+View+Plugin</url>
   <description>Adds a new high visibility view of project status.</description>
